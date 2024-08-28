@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrome Extension</title>
+    <style>
+        .main {
+            /* background-image: url("sanket img.jpg"); */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* width: 100vw; */
+            /* object-fit:contain; */
+            height: 100vh;
+            /* background-repeat: no-repeat; */
+        }
+
+        h2 {
+            list-style-type: none;
+            color: rgb(53, 84, 7);
+        }
+
+        input {
+            padding: 5px 20px;
+            padding-left: 10px;
+            width: auto;
+            border-radius: 10px;
+        }
+
+        button {
+            background-color: green;
+            color: aliceblue;
+            padding: 5px 20px;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+
+        input:active {
+            background-color: white;
+            color: green;
+        }
+
+        button:active {
+            background-color: white;
+            color: green;
+        }
+        /* p{
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 10px;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="time">
+            <p id="time"></p>
+    </div>
+    <br>
+    <div class="form">
+        <input type="text" id="input-el">
+        <button id="save-el">SAVE </button>
+        <button id="delete-el">DELETE</button>
+        <h2 id="list-el"></h2>
+    </div>
+    </div>
+    <script>
+        // document.getElementById("time").innerHTML = "date" + Date();
+        let myElement = []
+        const inputEl = document.getElementById("input-el")
+        const saveEl = document.getElementById("save-el")
+        const listEl = document.getElementById("list-el")
+        const deleteEl = document.getElementById("delete-el")
+
+
+        saveEl.addEventListener("click", function () {
+            myElement.push(inputEl.value)
+            inputEl.value = " "
+            localStorage.setItem("myElement", JSON.stringify(myElement))
+            let items = JSON.parse(localStorage.getItem("myElement"))
+            console.log(items)
+            listEl.textContent = myElement
+            returnn()
+            console.log(localStorage.getItem("myElement"))
+        })
+        deleteEl.addEventListener("click", function () {
+            localStorage.clear()
+            myElement = []
+            returnn()
+        })
+
+        function returnn() {
+            let listItems = ""
+            for (let i = 0; i < myElement.length; i++) {
+                listItems += `<li> ${myElement[i]} </li>`
+            }
+            listEl.innerHTML = listItems
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RockPaperGame</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            background-color: aqua;
+            /* font-family: Helvetica, sans-serif; */
+        }
+
+        .box {}
+
+        #emoji {
+            font-size: 60px;
+            transform: rotate(0deg);
+
+        }
+
+        h2 {
+            display: flex;
+            justify-content: center;
+        }
+
+        button {
+            background-color: rgba(14, 14, 14, 0.933);
+            border-radius: 20px;
+            color: aliceblue;
+            border: 0;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 30px;
+            display: flex;
+            margin: 20px;
+            margin-left: 30px;
+            padding: 10px 30px;
+            text-align: center;
+            justify-content: center;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        button:active {
+            background-color: rgba(8, 85, 2, 0.801);
+        }
+
+        pre {
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        @media only screen and (max-width :600px) {
+            * {
+                margin: 10px;
+            }
+
+        }
+    </style>
+</head>
+
+<body <div class="container">
+    <div class="box">
+        <h1>
+            Lets play game🤩🥳
+        </h1>
+        <h1>Rock Paper Scissor </h1>
+        <div class="game">
+            <pre> Computer           You</pre>
+            <h1 id="emoji"></h1>
+            <h2 id="win"></h2>
+            <button id="change" onclick="startGame()"> MOVE here </button>
+
+        </div>
+    </div>
+    </div>
+
+    <script>
+        let emoji = ["✊🏻", "✌🏻", "🖐🏻"]
+        let gameBegin = document.getElementById("emoji")
+        let winstatement = document.getElementById("win")
+        function startGame() {
+            let random1 = Math.floor(Math.random() * emoji.length)
+            let random2 = Math.floor(Math.random() * emoji.length)
+
+            //  let statement =winstatement.textContent = [" "]
+
+            if (random1 === random2) {
+                console.log(winstatement.innerHTML = "Tie")
+            }
+            // console.log(random1,random2)
+            else if (
+                (random1 == "0" && random2 == "1") ||
+                (random1 == "1" && random2 == "2") ||
+                (random1 == "2" && random2 == "0")
+            ) {
+                console.log(winstatement.innerHTML = "computer wins")
+            }
+            else {
+                console.log(winstatement.innerHTML = "Congrats You Won🤩👊🏻")
+                // alert("Congrats You Won!🤩👊🏻")
+            }
+            // else if (emoji[0] = emoji[3]){
+            //             winstatement.textContent = "you win"
+            // }
+            // else if (random1[1] == random2[0]){
+            //             winstatement.textContent = "you win"
+            // }
+            // else if (random1[0] === random2[2]){
+            //             winstatement.textContent = "you win"
+            // }
+            gameBegin.textContent = `${emoji[random1]} vs ${emoji[random2]}`
+
+
+        }
+        startGame()
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoginPage</title>
+    <style>
+        body {
+            background-color: rgba(182, 181, 181, 0.623);
+            /* background-image: url(IMG-20231230-WA0036.jpg); */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 90px;
+        }
+
+        .container {
+            border: 1px solid rgb(78, 78, 78);
+            height: 60vh;
+            width: 60vw;
+            /* background-color: rgba(253, 253, 253, 0.987); */
+            background-image: url(IMG-20231230-WA0036.jpg);
+            /* filter:brightness(200%); */
+            border-radius: 15px;
+            justify-content: center;
+            align-items: center;
+            /* margin: 70px 400px; */
+            padding: 50px;
+            color: aliceblue;
+        }
+
+        .header {
+            text-align: center;
+            color: rgb(0, 225, 255);
+            font-size: 30px;
+            margin: 10px 0px;
+            font-weight: bold;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+
+        .form {
+            padding: 0px;
+            margin: 0px 0px;
+        }
+
+        input[type=text],
+        [type=submit] {
+            padding: 10px;
+            margin: 10px;
+            width: 100%;
+            display: grid;
+            border-radius: 15px;
+            box-sizing: border-box;
+            display: inline-block;
+        }
+
+        input[type=password] {
+            padding: 10px;
+            margin: 10px;
+            width: 100%;
+            display: grid;
+            border-radius: 15px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit]:hover {
+            background-color: rgba(4, 12, 248, 0.976);
+            color: white;
+            /* box-shadow: 8px 8px 8px rgb(0, 255, 64); */
+        }
+
+        .signin {
+            display: grid;
+            padding: 10px;
+            margin: 0px;
+            width: 100%;
+
+        }
+
+        button {
+            border: 1px solid black;
+            border-radius: 15px;
+            padding: 10px;
+        }
+
+        button:hover {
+            background-color: blue;
+            color: white;
+        }
+
+        a {
+            color: rgb(61, 224, 224);
+        }
+
+        a:hover {
+            color: rgb(10, 244, 244);
+        }
+
+        img {
+            opacity: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="main">
+        <div class="container">
+            <div class="header">
+                Login page
+            </div>
+            <form class="form">
+                <div class="input">
+
+                    <label for="gmailid">Gmail id</label>
+                    <input id="gmailid" name="gamil" placeholder="Enter your gamil Id" type="text">
+                    <label fd="password">Password</label>
+                    <input id="password" name="password" placeholder="password" type="password">
+                    <label for="submit"></label>
+                    <input href="layout.html"  id="submit" name="submit" type="submit">
+
+
+
+                </div>
+                <div class="signin">
+                    <h4><a href="layout.html">Forgot password</a></h4>
+                    <button  onclick="increment()" style="float:right;">Sign in</button>
+                </div>
+
+
+            </form>
+            <!-- <button  onclick=increment() style="float:righ;">Sign in</button> -->
+                </div>
+        </div>
+    </main>
+
+    <script>
+        function increment(){
+            alert("hey you ")
+        }
+    </script>
+</body>
+
+</html>
