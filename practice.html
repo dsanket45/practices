@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width",initial-scale="1.0">
+        <title>Practice</title>
+        <style>
+            body{
+            margin: 0%;
+            }
+            .container{
+                display:block;
+                margin: 0%;
+                padding: 1.5vw;
+                font-size: 1em;
+                backgroun-color: rgb(246, 157, 50);
+                color: black;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            .left{
+                list-style-type: none;
+                font-size: 1em;
+                margin: 0%;
+                backgroud-color: rgba(93, 92, 92, 0.617);
+            }
+            .right{
+                display: grid;
+                grid-template-columns: 38.5vw 60vw;
+                height: 70vh;
+                min-height: 40vh;
+            }
+            .footer{
+                text-align: center;
+                margin-bottom:0;
+                margin-top: auto;
+                padding: 2vh;
+                height: 20vh;
+            }
+            ul{
+                overflow: hidden;
+                margin: 0%;
+                padding: 0%;
+                list-style-type: none;
+                background-color: rgba(0, 0, 0, 0.795);
+
+            }
+            li{
+                float:left
+            }
+            li a{
+                color: white;
+                display: flex;
+                text-align: center;
+                padding: 3vw;
+                text-decoration: none;
+            }
+            
+            
+            li a:hover{
+                background-color: yellowgreen;
+                display: inline-block;
+                color: black;
+            }
+            .container{
+                background-image: url(c:\Users\dsank\Documents\IMG_20231111_142600.jpg);
+                background-position: right top;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            }
+        
+        </style>
+    </head>
+    <body>
+        
+        
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href=#results">results</a></li>
+            <li><a href=#about">about</a></li>
+            <li><a href=#community">community</a></li>
+            <li><a href="video.html">Video's</a></li>
+        </ul>
+
+
+        
+        <form>
+            <label for="web">Enter your name</label><br>
+            <input type="text" id="web" value="" name="name" placeholder="Enter name">
+            <input type="submit" value="submit"><br>
+             
+            <label for="birthdaytime">Birthday (date and time):</label>
+            <input type="datetime-local" id="birthdaytime" name="birthdaytime"><br>
+            
+            <label style="foat: right;" for="cars">Choose your fvt car</label>
+            <select id="cars" name="car" size="">
+                <option value="-none">-none</option>
+                <option value="BMW">BMW</option>
+                <option value="AUDI">FERRARI</option>
+                <option value="mercedes">MERCEDES</option>
+                <option value="BMW">BhdgsgkjsdgjdjskMW</option>
+                <option value="AUDI">FERdsfbasdjkfgskdjfRARI</option>
+                <option value="mercedes">MERCEDESjfgskdjfgsdhfsjsdjfhsdjkgf</option>
+                <input type="submit" value="submit">
+            </select><br>
+            <button style="float: right";type="button" onclick="alert(' I said you dont touch me')">Dont touch me</button>
+        </form><hr>
+        
+        <!--<svg width="1220" height="100">
+            <rect width="1220" height="100" style="fill: rgba(11, 9, 9, 0.47); stroke-width: 5px; stroke: black;"></rect>
+            <circle width="100" height="100" cx="50" cy="50" r="40" stroke="black" stroke-width="2" fill="orange"></circle>
+            <polygon points="50,5, 20,99 95,34 5,34 80,99"
+              style="fill:lime;stroke:purple;stroke-width:2;fill-rule:evenodd;display: grid;grid-template-columns: 50% 50%;" />
+        </svg><hr>-->
+        <div class="container" style="background-color: rgba(195, 147, 253, 0.694);background-image: url(c:\Users\dsank\Documents\IMG_20231111_142600.jpg);"
+        margin="200px";display="inline";>
+            <h3>THE HEADER</h3>
+            <p style="color: rgb(128, 7, 240);">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque culpa tenetur nobis 
+                adipisci tempore aspernatur officiis maxime dolore id quasi error 
+                impedit ratione, eveniet, ex rem. Corrupti beatae ab ipsum.</p>
+         </div>
+
+
+         <div class="right">
+             <div class="left" style="background-color: rgba(85, 102, 102, 0.681); padding: 4%;">
+                <p>Roman news</p>
+                <p>Indian express</p>
+                <p>American shark</p>
+                <p>Russian tanks</p>
+                <p>Japan talents</p>
+                <p>Surbian armys</p>
+             </div>
+            <div class="container" style="background-color: black; color: white;">
+             <h3> THE RIGHT SECTOR</h3>
+           <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur esse eum, 
+            repellendus assumenda deleniti nemo laboriosam obcaecati illo autem iste accusamus ullam, quidem at.
+             Esse qui ducimus quis obcaecati blanditiis adipisci commodi distinctio ipsa suscipit dolorem at, beatae inventore, 
+             deserunt quia explicabo impedit Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quidem, labore similique exercitationem 
+             consectetur cumque adipisci, distinctio error omnis earum aut consequuntur incidunt voluptatibus
+              rem qui eos nostrum, illo nesciunt. 
+            autem possimus quasi provident ut doloremque corrupti.</P>
+           </div>
+       </div>
+       <footer>
+        <div class="footer" style="background-color: rgba(0, 0, 0, 0.109);height: 100px;">
+        <h3>THE FOOTER</h3>
+        <p>Designed and created by: <b>SANKET</b></h5>
+            <p>contact :-<a href="mailto:dsanket965@gmail.com">dsanket965@gmail.com</a></p>
+            <p>&copy; copyright under 2024</p>
+            <!--<p style="color: blue;text-decoration: underline;">dsanket965@gmail.com</p>-->
+        </div>
+       </footer>
+    </body>
+</html>

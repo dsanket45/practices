@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice1</title>
+    <style>
+        .container{
+            position: relative;
+        }
+        .first{
+            position: relative;
+            margin: 30px;
+            border: 15px solid red;
+            border-radius: 20px;
+            height: 200px;
+            z-index: 1;
+            width: 500px;
+        }
+        .second{
+            position: absolute;
+            background: bisque;
+            z-index: 3;
+            height: 100px;
+            left:100px ;
+            top: 100px;
+            width: 300px;
+        }
+        .third{
+            position: absolute;
+            background:greenyellow ;
+            top: -15px;
+            left: 230px;
+            z-index:2;
+            width: 300px;
+            height: 130px;
+        }
+    </style>
+</head>
+<body style="background-image: rl(IMG_20231111_142600.jpg);
+background-attachment: fixed;background-position:right;background-repeat: no-repeat;
+background-size: cover;filter: blur(0px);">
+    <form>
+    <label for="course list" name="course">Engineering course list</label>
+    <select id="course list" name="course" size="">
+        <option value="CSE">-none</option>
+        <option value="CSE">CSE</option>
+        <option value="ISE">ISE</option>
+        <option value="EEE">EEE</option>
+        <option value="ECE">ECE</option>
+        <option value="CVE">CVE</option>
+        <input type="submit" value="submit">
+    </select>
+    <label for="birthdaytime">Birthday date & time</label>
+    <input type="datetime-local" id="birthdaytime" name="Birthday">
+    <input type="submit" value="submit">
+</form>
+<vido  height="500" width="340" controls autoplay>
+    <source src="sanket.mp4" type="video/mp4">
+    <source src="sanket.ogg" type="video/ogg">
+    your browser not suppotrs
+</video>
+<div class="container">
+    <div class="first">Big border</div>
+    <div class="second">Second box</div>
+    <div class="third">Third box</div>
+</div>
+
+</body>
+</html>

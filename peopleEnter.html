@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* body{ */
+            /* background-image: ; */
+        
+        .box{
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 2px 5px 9px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            margin: 10%;
+            /* padding-top: 10%; */
+            display: grid;
+            gap: 10px;
+            /* background-image: url("sanket img.jpg"); */
+            object-fit:fill;
+        
+        }
+        h1{
+            padding: 0px;
+            font-weight: bold;
+            font-family:'Times New Roman', Times, serif;
+        }
+        button{
+            padding: 10px;
+            width: 180px;
+            /* float: inline-end; */
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 10px;
+            background-color: rgb(55, 232, 11);
+            font-weight: bold;
+            border-radius: 10px;
+        }
+        button:active {
+            background-color: rgb(249, 251, 249);
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>People Entered in the Street:</h1>
+        <h1 id="count-el">0</h1>
+
+       <div class="btn"> 
+        <button onclick="increment()">INCREMENT</button>
+        <button onclick="save()" >SAVE</button>
+        <h3 id="save-el">Previous entries are:</p>
+    </div>
+        
+    </div>
+    <script>
+        let count = 0;
+        function increment(){
+            count += 1
+            document.getElementById("count-el").textContent = count
+        }
+        function save(){
+            let result = count + "-"
+            document.getElementById("save-el").textContent +=result
+            document.getElementById("count-el").textContent = 0
+            count = 0
+            // console.log(count)
+        }
+        // increment()
+        
+    </script>
+</body>
+</html>
