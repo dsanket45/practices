@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Cards</title>
+    <style>
+        .container {
+            background-color: ;
+            /* margin: 10px; */
+            /* padding: 10px; */
+
+        }
+
+        .cards {
+            margin: 10px;
+            display: flex;
+            width: 600px;
+            height: 115px;
+            border-left: 5px solid black;
+            /* border: 10px solid black, 1px solid black; */
+            /* float: right; */
+            /* margin: 5px; */
+            position: relative;
+            /* overflow: hidden; */
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+
+        .image {
+            position: relative;
+
+        }
+
+        .image img {
+            width: 150px;
+            height: 100px;
+            padding: 6px;
+            position: relative;
+
+        }
+
+        .capsule {
+            position: absolute;
+            /* float: right; */
+            bottom: 10px;
+            z-index: 1;
+            right: 5px;
+            background-color: black;
+            color: white;
+            border-radius: 2px;
+            padding: 2px;
+        }
+
+        .h1 {
+            overflow: hidden;
+            max-width: fit-content;
+            max-height: 40px;
+        }
+        @media only screen and (max-width:700px){
+            * {
+                margin: -1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+       
+       <!-- <button onclick="getCard('javascript')">new</button>  -->
+       <button  onclick="getCard('Java Script tutorial #2' ,'dSANKET','99000000',2 ,'sanket img.jpg','22:20')">Make new video</button>
+        <div class="cards">
+            <div class="image">
+                <a href="sanket.mp4">
+                <img src="sanket img.jpg" alt="">
+                <div class="capsule">1:00:00</div>
+            </a>
+            </div>
+            <div class="text">
+                <h1 class="h1">Lets learn the javascript!!! #1
+                </h1>
+                <p>D Sanket . 100M . 1 month ago</p>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        let input = document.getElementById("btn")
+        function getCard(title, channel, views, date, thumbnail, duration) {
+            let viewstr
+            if (views < 1000) {
+                viewstr = views
+            }
+            else if(views <1000000){
+                viewstr = views/1000 + "k"
+            }
+            else{
+                viewstr = views/1000000 + "M"
+            }
+
+            let html = `<div class="cards">
+            <div class="image">
+                <a href="sanket.mp4"><img src="${thumbnail}" alt="">
+            <div class="capsule" > ${duration }</div >
+                </a>
+             </div >
+            <div class="text">
+                <h1 class="h1">${title}</h1>
+                <p>${channel} . ${viewstr} views. ${date}month ago</p>
+                </div>
+                </div >`
+                document.querySelector(".container").innerHTML = document.querySelector(".container").innerHTML +html
+            }
+            
+
+        document.getElementById("btn").innerHTML = getCard("Java Script tutorial #2" ,"dss","9900",2 ,"sanket img.jpg","22:20")
+        // getCard("Java Script tutorial #2" ,"dss","9900",2 ,"sanket img.jpg","22:20")
+        // getCard("Java Script tutorial #3" ,"dss","200000",2 ,"sanket img.jpg","44:30")
+        // getCard("Java Script tutorial #4" ,"dss","20000000",2 ,"sanket img.jpg","32:54")
+        // getCard("Java Script tutorial #5" ,"dss","20000000",2 ,"sanket img.jpg","32:54")
+        // getCard("Java Script tutorial #6" ,"dss","4000",2 ,"sanket img.jpg","32:54")
+        // getCard("Java Script tutorial #7" ,"dss","20000000",2 ,"sanket img.jpg","32:54")
+        // getCard("Java Script tutorial #8" ,"dss","600000",2 ,"sanket img.jpg","32:54")
+        // getCard("Java Script tutorial #9" ,"dss","9100",2 ,"sanket img.jpg","32:54")
+        // getCard("Java Script tutorial #10" ,"dss","780000",2 ,"sanket img.jpg","32:54")
+        
+    </script>
+</body>
+
+</html>
